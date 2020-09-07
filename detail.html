@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<style>
+input[type=text], select {
+  width: 100%;
+  padding: 8px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #FFFFFF;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #FFFFFF;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  padding: 20px;
+}
+  .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+</style>
+<body>
+
+<h3>Add a new Vendor</h3>
+
+<div>
+  <form action="/action_page.php">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    <label for="Address line1">Address Line1</label>
+    <input type="text" id="fname" name="Address Line 1" placeholder="">
+     <label for="Address line2">Address Line2</label>
+    <input type="text" id="fname" name="Address Line 1" placeholder="">
+     <label for="pincode">pincode</label>
+    <input type="text" id="fname" name="Address Line 1" placeholder="">
+     <label for="Address line1">District</label>
+    <input type="text" id="fname" name="Address Line 1" placeholder="">
+     <label for="Address line1">State
+    <input type="text" id="fname" name="Address Line 1" placeholder=""></label>
+    <br> <label for="Address line1">Image</label>
+    <input type="file" id="myFile" name="filename"></br>
+  <label for="Address line1">Add New Brand
+    <input type="text" id="fname" name="Address Line 1" placeholder=""></label>
+   <label for="cars">Add Existing Brand:</label>
+  <select id="cars" name="cars">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat" selected>Brand list</option>
+    <option value="audi">Audi</option>
+    <
+  </select>
+    <br>
+    Status
+  <label class="switch">
+   
+  <input type="checkbox" checked>
+  <span class="slider round"></span>
+</label>
+    </br>
+
+    
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+  <button type="submit" value="Submit">Cancel</button>
+  <button type="reset" value="Reset">Save</button>
+  
+   
+  </form>
+</div>
+
+</body>
+</html>
